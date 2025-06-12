@@ -57,7 +57,7 @@ header{
     padding-inline: 20px;
     list-style: none;
 }
-.separador{
+.divider{
     display: flex;
     gap: 30px;
 }
@@ -116,9 +116,9 @@ main h1:hover::after{
     width: 80%;
 }
 
-/* Portafolio */
+/* portfolio */
 
-.portafolio{
+.portfolio{
     margin-top: 10vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -128,7 +128,7 @@ main h1:hover::after{
     margin-inline: auto;
 }
 
-.portafolio__item{
+.portfolio__item{
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -163,7 +163,7 @@ main h1:hover::after{
     font-size: 1.5em;
 }
 
-.portafolio__item:hover{
+.portfolio__item:hover{
     .item__content{
         position: static;
         animation: appear 0.5s linear forwards;
@@ -177,7 +177,7 @@ main h1:hover::after{
 
 /* Footer */
 
-.contacto{
+.contact{
     margin: 100px auto;
     width: 100%;
     height: 30vh;
@@ -187,12 +187,12 @@ main h1:hover::after{
     gap: 50px;
 }
 
-.contacto__title{
+.contact__title{
     font-size: 4em;
     position: relative;
 }
 
-.contacto__title::after{
+.contact__title::after{
     content: "";
     background: #000;
     width: 0%;
@@ -204,28 +204,28 @@ main h1:hover::after{
     transition: 150ms ease-in-out;
 }
 
-.contacto__title:hover::after{
+.contact__title:hover::after{
     width: 100%;
 }
 
-.footer__info{
+.contact__info{
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.footer__info h3{
+.contact__info h3{
     font-size: 1.5em;
 }
 
-.footer__contact{
+.info__data{
     font-size: 1.2em;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.footer__contact a{
+.info__data a{
     width: max-content;
     display: flex;
     align-items: center;
@@ -235,8 +235,9 @@ main h1:hover::after{
     width: 1em;
 }
 
-.footer__contact a:hover{
+.info__data a:hover{
     background-color: #000;
+    fill: white;
 }
 
 /* Animaciones */
@@ -280,7 +281,7 @@ main h1:hover::after{
     .contacto__title::after{
         display: none;
     }
-    .portafolio__item{
+    .portfolio__item{
         flex-direction: column;
         align-items: center;
     }
@@ -291,26 +292,32 @@ main h1:hover::after{
     .content__img{
         width: 100%;
     }
-        .portafolio{
+    .portfolio{
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width:768px) {
+    .navbar__list{
+        justify-content: center;
+        gap: 30px;
+    }
     main{
         font-size: 1.8em;
     }
-
     .item__title{
         border-bottom: none;
-    }
-    .contacto{
-        flex-direction: column;
-    }
-    .contacto__title{
         font-size: 3em;
     }
-    .footer__contact{
+    .contact{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .contact__title{
+        font-size: 3em;
+        text-align: center;
+    }
+    .info__data{
         font-size: 1em;
     }
 }
